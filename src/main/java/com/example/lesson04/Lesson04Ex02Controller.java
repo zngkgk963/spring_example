@@ -17,7 +17,7 @@ public class Lesson04Ex02Controller {
 	
 	@Autowired
 	private StudentBO studentBO;
-	
+
 	// 학생 추가하는 페이지
 	@GetMapping("/add_student_view")
 	public String addStudentView() {
@@ -32,7 +32,6 @@ public class Lesson04Ex02Controller {
 		
 		// insert db
 		studentBO.addStudent(student); // 방금 인서트 된 id가 student 객체에 세팅된다.
-		// student.getId();
 		
 		// select db
 		Student latestStudent = studentBO.getStudentById(student.getId());
@@ -41,3 +40,4 @@ public class Lesson04Ex02Controller {
 		return "lesson04/afterAddStudent";
 	}
 }
+

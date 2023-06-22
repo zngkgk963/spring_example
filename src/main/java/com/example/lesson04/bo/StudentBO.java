@@ -11,11 +11,12 @@ public class StudentBO {
 	
 	@Autowired
 	private StudentMapper studentMapper;
+
 	public void addStudent(Student student) {
 		studentMapper.insertStudent(student);
 	}
 	
-	public int getStudentById() {
-		
+	public Student getStudentById(int id) {
+		return studentMapper.selectStudentById(id);
 	}
 }
