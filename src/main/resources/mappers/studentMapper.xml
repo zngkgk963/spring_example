@@ -25,4 +25,8 @@
 			, NOW()
 		)
 	</insert>
+	
+	<select>
+	
+	</select>
 </mapper>

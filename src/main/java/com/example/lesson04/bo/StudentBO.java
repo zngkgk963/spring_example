@@ -14,4 +14,8 @@ public class StudentBO {
 	public void addStudent(Student student) {
 		studentMapper.insertStudent(student);
 	}
+	
+	public int getStudentById() {
+		
+	}
 }

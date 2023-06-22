@@ -12,6 +12,23 @@
 <body>
 	<div class="container">
 		<h1>학생 정보</h1>
+		<tr>
+			<th></th>
+			<td></td>
+		</tr>
+		<tr>
+			<th></th>
+			<td></td>
+		</tr>
+		<tr>
+			<th></th>
+			<td></td>
+		</tr>
+		<tr>
+			<th></th>
+			<td></td>
+		</tr>
+		
 	</div>
 </body>
 </html>
