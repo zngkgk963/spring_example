@@ -18,34 +18,32 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @ToString // toString override 값 예쁘게 출력
-@AllArgsConstructor // 모든 필드를 인자값으로 받는 생성자
-@NoArgsConstructor	//파라미터 없는 기본 생성자
-@Builder(toBuilder = true)	//setter 대용
-@Getter		//getter
+@AllArgsConstructor  // 모든 필드를 인자값으로 받는 생성자
+@NoArgsConstructor   // 파라미터 없는 기본 생성자
+@Builder(toBuilder = true)   // setter 대용
+@Getter    // getter
 @Table(name = "new_student") // 테이블명에 언더바 붙어있을 때 꼭 추가한다.
-@Entity	// 이 클래스는 Entity다
+@Entity // 이 클래스는 Entity다
 public class StudentEntity {
-	@Id		//pk
+	@Id    // pk
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // auto increment
 	private int id;
 	
 	private String name;
 	
-	@Column(name = "phoneNumber")
+	@Column(name = "phoneNumber") // 카멜케이스 필드인 경우 반드시 명시
 	private String phoneNumber;
 	
 	private String email;
 	
-	@Column(name = "dreamJob") // 카멜케이스 필드인 경우 반드시 명시
+	@Column(name = "dreamJob")
 	private String dreamJob;
 	
-	@UpdateTimestamp	// createdAt이 null이면 현재 시간으로 자동으로
-	@Column(name = "createdAt", updatable = false) // updatable=false 시간 갱신 안함.
+	@UpdateTimestamp  // createdAt이 null이면 현재 시간으로 자동으로 입력
+	@Column(name = "createdAt", updatable = false) // updatable=false 업데이트시 시간 갱신 안함
 	private ZonedDateTime createdAt;
 	
 	@UpdateTimestamp
 	@Column(name = "updatedAt")
 	private ZonedDateTime updatedAt;
-	
-	
 }

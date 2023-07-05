@@ -8,7 +8,7 @@ import com.example.lesson07.entity.StudentEntity;
 @Repository
 public interface StudentRepository extends JpaRepository<StudentEntity, Integer> {
 	// Spring Data JPA
-	// save()
+	// save(객체)
 	
 	// findById()
 }
