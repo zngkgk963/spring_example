@@ -46,6 +46,7 @@ public class Lesson07Ex02RestController {
 	@GetMapping("/2")
 	public List<StudentEntity> getStudent() {
 		// 장래희망이 래퍼인 데이터 조회
+		
 		return studentRepository.findByDreamJob("래퍼");
 	}
 }
